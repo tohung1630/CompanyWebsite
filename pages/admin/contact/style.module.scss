@@ -1,0 +1,42 @@
+.columnLink a {
+  color: #9c27b0;
+  text-decoration: none;
+}
+
+.contactFooter {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.tableFooter {
+  position: relative;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+  }
+}
+
+.btnHide {
+  opacity: 0.6;
+  cursor: none;
+}
+
+.btnPrev {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  transform: translateY(-50%);
+}
+
+.btnNext {
+  position: absolute;
+  top: 50%;
+  right: 32%;
+  transform: translateY(-50%);
+}

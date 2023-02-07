@@ -1,0 +1,169 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {
+  position: relative;
+  margin-top: var(--height-header);
+
+  .bannerMargin {
+    height: 180px;
+    width: 100%;
+  }
+
+  .background {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right, #0045c5 0%, #b3c8ee 100%);
+  }
+
+  .imageBannerWrapper {
+    width: 1200px;
+    margin: auto;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .imageBanner {
+    width: 100%;
+    height: 100%;
+  }
+
+  .namePageBackground {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+  }
+
+  .namePage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+
+    h2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 32px;
+      color: var(--white-color);
+      text-transform: capitalize;
+      position: absolute;
+      top: 50%;
+      left: 12%;
+      transform: translateY(-50%);
+      &::after {
+        content: '';
+        max-width: 80px;
+        margin-left: 20px;
+        border-bottom: solid 1px var(--white-color);
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+  span {
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    font-size: 16px;
+    color: #888888;
+    text-transform: uppercase;
+
+    p {
+      color: var(--white-color);
+      margin-left: 16px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.container {
+  margin: auto;
+  margin-top: var(--height-header);
+  max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .banner {
+    .imageBannerWrapper {
+      width: 1000px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    .imageBannerWrapper {
+      width: 800px;
+    }
+  }
+
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    .imageBannerWrapper {
+      width: 520px;
+    }
+  }
+
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .banner {
+    .imageBannerWrapper {
+      width: 350px;
+    }
+    .imageBannerWrapper {
+      height: 200px;
+    }
+    .bannerMargin {
+      height: 120px;
+    }
+
+    .background {
+      height: 150px;
+    }
+
+    .namePageBackground {
+      font-size: 50px;
+    }
+
+    .namePage h2 {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.wrapper {
+  width: 100%;
+  background-color: var(--text-color);
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.footerLogo {
+  width: 173px;
+  height: 50px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.socials {
+  z-index: 2;
+
+  a {
+    margin-right: 24px;
+    cursor: pointer;
+  }
+}
+
+.socials > a:last-child {
+  margin-right: 0;
+}
+
+.socialIcon {
+  font-size: 24px;
+  border-radius: 50%;
+  color: var(--white-color);
+}
+
+// info
+.info {
+  margin-top: 50px;
+}
+
+.infoContent {
+  ul {
+    margin-top: 30px;
+    list-style-type: none;
+    color: var(--white-color);
+    margin-bottom: 30px;
+    h3 {
+      margin-bottom: 8px;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+.iconSms {
+  margin-right: 9px;
+}
+
+.iconPhone {
+  width: 16px;
+  margin-right: 10px;
+}
+
+.iconLocation {
+  width: 18px;
+  margin-right: 8px;
+}
+
+// contact
+.contact {
+  margin-top: 60px;
+  color: var(--white-color);
+}
+
+.contactList {
+  margin-bottom: 30px;
+  h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 5px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+.rightIcon {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+.footerTittle {
+  color: var(--white-color);
+  text-align: center;
+  padding: 32px 0;
+}
+
+.gotoTop {
+  width: 40px;
+  height: auto;
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.message {
+  width: 40px;
+  height: auto;
+  position: fixed;
+  bottom: 120px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.callPhone {
+  width: 40px;
+  height: auto;
+  position: fixed;
+  bottom: 60px;
+  left: 50px;
+  cursor: pointer;
+}
+
+// responsive
+
+/* mobile */
+@media (max-width: 992px) {
+  .contact {
+    margin-top: 30px;
+  }
+
+  .infoContent > ul {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 577px) {
+  .gotoTop {
+    bottom: 60px;
+    right: 20px;
+  }
+
+  .message {
+    bottom: 120px;
+    left: 20px;
+  }
+
+  .callPhone {
+    bottom: 60px;
+    left: 20px;
+  }
+}

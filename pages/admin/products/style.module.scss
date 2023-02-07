@@ -1,0 +1,109 @@
+$primaryColor: #3f51b5;
+
+.product {
+  margin-top: 1%;
+}
+
+.floatRight {
+  float: right;
+}
+
+.eventElement {
+  font-size: 17px;
+  margin-bottom: 5%;
+  padding: 4% 8%;
+  width: 210px;
+  height: 40px;
+
+  &:hover {
+    transition: all 0.2s;
+    border-color: black !important;
+  }
+
+  &:focus {
+    border-color: $primaryColor;
+    box-shadow: none;
+  }
+}
+
+.productButton {
+  color: #fff !important;
+  background-color: $primaryColor;
+  border-color: $primaryColor !important;
+  font-weight: bold;
+  line-height: 1.75;
+  margin-bottom: 5% !important;
+  text-transform: uppercase;
+  border-radius: 4px;
+  height: 40px;
+
+  &:hover {
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  }
+}
+
+.sortBy {
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.productSearch {
+  margin-bottom: 2%;
+}
+
+.table {
+  font-size: 17px;
+}
+
+.iconProduct {
+  font-size: 18px;
+}
+
+.margin {
+  margin-left: 10px;
+}
+
+.popUpMessage {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7c7c7c;
+}
+
+.popUpMessage::first-letter {
+  text-transform: capitalize;
+}
+
+.popUpBtn {
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+  min-width: 90px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.confirmBtn {
+  @extend .popUpBtn;
+  background-color: #3f51b5;
+}
+
+.confirmBtn:hover {
+  color: white !important;
+  background-color: #303f9f;
+}
+
+.backBtn {
+  @extend .popUpBtn;
+  background-color: #f50057;
+}
+
+.backBtn:hover {
+  color: white !important;
+  background-color: #c51162;
+}

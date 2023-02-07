@@ -1,0 +1,261 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--height-header);
+  color: var(--text-color);
+  z-index: 99;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: transparent;
+  nav {
+    list-style-type: none;
+  }
+}
+
+.contentRow {
+  height: 100%;
+  width: 100%;
+}
+
+.headerWrapper {
+  height: 100%;
+  background-color: var(--white-color);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
+}
+
+.headerWrapper.headerTransparent {
+  color: var(--white-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.logo {
+  width: 118px;
+  height: 39px;
+  cursor: pointer;
+}
+
+.navBar {
+  display: flex;
+}
+
+.navBar > li {
+  z-index: 5;
+}
+
+.itemAction,
+.navBarItem {
+  position: relative;
+  text-transform: uppercase;
+  padding: 16px 10px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    border-bottom: solid 2px var(--primary-color);
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    &::before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+}
+
+.header.headerTransparent {
+  .itemAction,
+  .navBarItem {
+    &::before {
+      border-bottom: solid 2px var(--white-color);
+    }
+
+    &:hover {
+      color: var(--white-color);
+      &::before {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.itemAction {
+  color: var(--primary-color);
+  &::before {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.navBarItem:hover .borderBottom {
+  display: block;
+}
+
+// nav bar service
+
+.navServiceWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  z-index: 2;
+  cursor: default;
+}
+
+.navServices {
+  display: block;
+  width: 258px;
+  top: 54px;
+  left: 8px;
+  padding: 26px 0;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgb(0 0 0 / 25%);
+  z-index: 3;
+}
+
+.navServicesItem {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  text-transform: none;
+  padding: 6px 9px;
+  margin: 0 0 4px 8px;
+  color: var(--text-color);
+  z-index: 4;
+
+  &::before {
+    content: '';
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    border-bottom: solid 2px var(--primary-color);
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    &::before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.languageItem {
+  opacity: 0.6;
+  padding: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.languageAction {
+  opacity: 1;
+  cursor: default;
+}
+
+/* icon Mobile */
+
+.iconMobile,
+.iconMobileWhite {
+  display: block;
+  font-size: 24px;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.iconMobile {
+  color: black;
+}
+
+.iconMobileWhite {
+  color: black;
+}
+
+// responsive
+
+@media (min-width: 992px) {
+  .navServices {
+    position: absolute;
+  }
+}
+
+// /* mobile */
+@media (max-width: 991px) {
+  .navBar {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
+
+  .iconMobile,
+  .iconMobileWhite {
+    display: block;
+  }
+
+  .navBar.navBarMobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: var(--height-header);
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    z-index: 99;
+  }
+
+  .navServices {
+    color: var(--text-color);
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+  .navServicesItem {
+    margin: 0 8px 4px 0;
+  }
+
+  .iconMobile,
+  .iconMobileWhite {
+    z-index: 100;
+  }
+}

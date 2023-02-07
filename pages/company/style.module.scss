@@ -1,0 +1,313 @@
+.wrapper {
+  position: relative;
+}
+
+.heading {
+  position: relative;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+
+  h1 {
+    margin-bottom: 40px;
+    &::before {
+      content: '';
+      height: 2px;
+      width: 80px;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: 47px;
+      left: 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    top: 46px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    top: 46px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+// info
+
+.info {
+  color: var(--text-color);
+  h2 {
+    padding: 28px 0;
+  }
+}
+
+.listInfo {
+  list-style-type: none;
+
+  .infoItem:first-child {
+    border-top: 1px solid #d6d6d6;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+}
+
+.infoItem {
+  width: 100%;
+  font-size: 16px;
+  color: var(--text-color);
+  border-bottom: 1px solid #d6d6d6;
+  h3 {
+    padding: 12px;
+  }
+  p {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+// ceo
+
+.ceoTittle {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -35px;
+  padding: 10px;
+  background-color: var(--white-color);
+  position: relative;
+  line-height: 1.4285;
+
+  p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+}
+
+.imageCeo {
+  width: 100%;
+  height: auto;
+}
+
+.ceoSign {
+  float: right;
+  text-align: center;
+  margin-bottom: 40px;
+  p {
+    font-size: 16px;
+  }
+  h3 {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+}
+
+// mission & value
+.MVWrapper {
+  margin-top: 180px;
+}
+
+.missionItem {
+  position: relative;
+  max-width: 657px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: var(--text-color);
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+  }
+
+  div {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+.missionItem:not(:last-child) {
+  padding-bottom: 93px;
+}
+
+.missionItem:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 93px;
+  background-color: #0045c5;
+}
+
+// core member
+.memberWrapper {
+  margin: 140px 0 40px;
+}
+
+.cardMember {
+  padding: 0 12px;
+  cursor: pointer;
+  .cardThumb {
+    width: 100%;
+    height: auto;
+  }
+
+  span {
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      width: 100%;
+      font-size: 16px;
+      line-height: 24px;
+      color: #888888;
+    }
+  }
+}
+
+.cardMemberMar {
+  margin-top: 100px;
+}
+
+// nav bar
+
+.navBar {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    &::before {
+      left: 0;
+      background-color: var(--primary-color);
+    }
+    &::after {
+      left: 130px;
+      background-color: var(--primary-color);
+    }
+
+    h1 {
+      &::before {
+        width: 130px;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .ceoTittle {
+    margin-left: 97px;
+    margin-right: 97px;
+    padding: 30px 20px;
+    margin-top: -50px;
+  }
+
+  .infoItem {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
+
+// member
+.modalCeo {
+  display: flex;
+}
+
+.modalAvatar {
+  width: 100%;
+  min-height: 450px;
+  position: relative;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.avatarUser {
+  left: 34px;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 0px;
+  width: 340px;
+  height: 463px;
+}
+
+.modalLogoR {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 253px;
+  height: 293px;
+  left: 4px;
+  bottom: 0;
+}
+
+.modalLogoR1 {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 253px;
+  height: 293px;
+  left: 3px;
+  bottom: 1px;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.modalTittle {
+  height: 100%;
+  padding: 0 24px;
+  margin-top: 48px;
+
+  .modalDecs {
+    color: #888888;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+    text-align: justify;
+    margin-top: 8px;
+  }
+
+  h3 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    border-bottom: 1px solid #888;
+  }
+}
+
+@media (min-width: 992px) {
+  .cardMember {
+    span {
+      padding: 20px 40px;
+      text-align: center;
+    }
+  }
+  .modalCeo {
+    width: 800px !important;
+  }
+}

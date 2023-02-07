@@ -1,0 +1,515 @@
+.container {
+  margin-top: -80px;
+}
+
+.slideWrapper1 {
+  margin: auto;
+  position: relative;
+}
+
+// Slider
+
+.slideWrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.slideImg {
+  position: relative;
+  min-width: 1360px;
+  height: 100%;
+}
+
+.slideImage {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  animation: zoomImage linear 10s infinite;
+}
+
+.description {
+  position: absolute;
+  bottom: 28px;
+  left: 8px;
+  color: var(--white-color);
+
+  h1 {
+    font-size: 70px;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  p {
+    font-size: 24px;
+    max-width: 700px;
+    line-height: 24px;
+    margin: 16px 0;
+  }
+
+  button {
+    padding: 13px 63px;
+    font-size: 14px;
+    color: var(--white-color);
+    background-color: transparent;
+    border-color: var(--white-color);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text-color);
+      background-color: var(--white-color);
+    }
+  }
+}
+
+@keyframes zoomImage {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.iconSlide {
+  width: 100px;
+  height: 100px;
+}
+
+.iconLeft {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  font-size: 32px;
+  color: var(--white-color);
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid var(--white-color);
+  padding: 2px 6px;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.iconRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  font-size: 32px;
+  color: var(--white-color);
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid var(--white-color);
+  padding: 2px 6px;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.slideBottom {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  font-size: 1.4rem;
+}
+
+.bottomIcon {
+  margin-left: 6px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.active {
+  border-radius: 50%;
+  color: var(--primary);
+  background-color: var(--primary);
+}
+
+// content
+.content {
+  margin-top: calc(100vh + var(--height-header));
+  min-height: 100px;
+
+  .ant-carousel .slick-dots li.slick-active button {
+    background: #7e2b2b;
+    opacity: 1;
+  }
+}
+
+.imageHeader {
+  width: 100%;
+  height: auto;
+}
+
+.slideListItem {
+  width: 1600px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slideItemWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.slideItem {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.imgSlide {
+  display: block;
+  height: 422px;
+  width: 280px;
+  margin: 0 16px;
+}
+
+.imgDesc {
+  padding: 0 16px;
+  max-width: 280px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: var(--white-color);
+
+  div {
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 50px;
+      height: 1px;
+      margin-right: 10px;
+      background-color: var(--white-color);
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 4px 0 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  button {
+    width: 240px;
+    height: 45px;
+    margin: 10px 0 16px;
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
+}
+
+.btnNext,
+.btnPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white-color);
+  font-size: 36px;
+  border: 1px solid var(--white-color);
+  padding: 2px 4px 5px;
+  background-color: rgb(60, 60, 60, 0.4);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.btnNext {
+  right: 40px;
+}
+
+.btnPrev {
+  left: 40px;
+}
+
+// client
+
+.logoItem {
+  text-align: center;
+  padding: 25px 12px;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+}
+
+// voice
+
+.voice {
+  position: relative;
+  width: 100%;
+}
+
+.useVoiceBackground {
+  position: absolute;
+  top: 180px;
+  left: -20%;
+  height: 796px;
+}
+
+.voiceContainer {
+  padding: 0 48px;
+  margin-top: 64px;
+}
+
+.voiceContent {
+  width: 100%;
+  position: relative;
+  padding: 50px 50px 70px;
+  background-color: var(--white-color);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 10%);
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: calc(100% - 60px);
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: var(--white-color);
+    -webkit-box-shadow: 0 30px 80px rgb(0 0 0 / 10%);
+    box-shadow: 0 30px 80px rgb(0 0 0 / 10%);
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    width: calc(100% - 110px);
+    height: 100%;
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 30px 40px rgb(0 0 0 / 10%);
+    box-shadow: 0 30px 40px rgb(0 0 0 / 10%);
+    z-index: -2;
+  }
+}
+
+.useVoices {
+  width: 306px;
+  margin: auto;
+}
+
+.voiceDesc {
+  h1 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  h2 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #888;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--text-color);
+  }
+}
+
+.btnVoice {
+  top: 60%;
+}
+
+// voice footer
+
+.voiceFooter {
+  margin-top: 80px;
+}
+
+.listNBItem {
+  list-style-type: none;
+  &:first-child {
+    border-top: 1px solid #d6d6d6;
+  }
+}
+
+.NBTittle {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  &::after {
+    content: '';
+    max-width: 80px;
+    margin-left: 20px;
+    border-bottom: solid 1px currentColor;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.active {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.NBItem {
+  padding: 20px 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .cardThumb {
+    width: 130px;
+    height: auto;
+  }
+
+  .cardBody {
+    padding: 0 16px;
+    flex: 1;
+    h5 {
+      font-size: 14px;
+      color: #888888;
+    }
+    p {
+      max-width: 406px;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--text-color);
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .cardBtn {
+      color: var(--primary-color);
+      font-size: 40px;
+      font-weight: 100;
+      padding-left: 20px;
+    }
+  }
+}
+
+.NBBtnSeeMore {
+  width: 196px;
+  height: 46px;
+  color: var(--text-color);
+  margin: 32px 0 48px;
+  float: right;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .description {
+    h1 {
+      font-size: 50px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .imageHeader {
+    width: 600px;
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1200px) {
+  .voiceFooter {
+    margin-top: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logoItemRow2 {
+    margin-left: 3%;
+  }
+
+  .voiceContent {
+    display: flex;
+  }
+
+  .voiceDesc {
+    align-self: center;
+  }
+}
+
+@media (max-width: 578px) {
+  .voiceContainer {
+    padding: 0;
+  }
+
+  .voiceContent {
+    box-shadow: 0px 0px 0px rgb(0 0 0 / 10%);
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 20px;
+
+    &::before {
+      -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+      box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    }
+
+    &::after {
+      -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+      box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    }
+  }
+
+  .useVoiceBackground {
+    top: 80px;
+    height: 1360px;
+  }
+
+  .btnVoice.btnNext {
+    right: 10px;
+  }
+
+  .btnVoice.btnPrev {
+    left: 10px;
+  }
+}

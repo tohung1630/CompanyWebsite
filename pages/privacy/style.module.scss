@@ -1,0 +1,49 @@
+.item {
+  padding-bottom: 20px;
+  color: #3b3b3b;
+  font-family: Arial, Helvetica, sans-serif;
+
+  strong {
+    line-height: 40px;
+  }
+
+  p {
+    line-height: 25px;
+  }
+}
+
+.center {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+
+      .content {
+        background-color: rgba(0, 69, 197, 0.7);
+        color: var(--white-color);
+      }
+    }
+  }
+
+}
+
+.icon {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px;
+  font-size: 24px;
+}
+
+.content {
+  background-color: #f8f8f8;
+  padding: 18px 10px 10px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3b3b3b;
+}

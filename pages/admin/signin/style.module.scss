@@ -1,0 +1,128 @@
+.wrapper {
+
+}
+
+.container {
+}
+
+.main{
+  position: relative;
+  left: 32%;
+  width: 500px;
+  padding: 20px;
+}
+
+.input{
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  transition: 0.25s ease;
+  margin: 0 0 30px 0;
+} 
+
+.input:focus{
+  border-color: rgb(33, 4, 138) !important;
+}
+
+.label_email{
+  position: absolute;
+  left: 21px;
+  top: 25px;
+  transform: translateY(-49%);
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.input:not(:placeholder-shown) + .label_email,
+.input:focus + .label_email{
+  top: 0;
+  padding: 0 5px;
+  display: inline-block;
+  background-color:white ;
+  color: rgb(33, 4, 138) ;
+}
+
+.label_pass{
+  position: absolute;
+  transform: translateY(-49%);
+  left: 21px;
+  top: 25px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.input:not(:placeholder-shown) + .label_pass,
+.input:focus + .label_pass{
+  top: 0;
+  padding: 0 5px;
+  display: inline-block;
+  background-color:white ;
+  color: rgb(33, 4, 138) ;
+}
+
+
+.name{
+  text-align: center;
+  font-size: 70px;
+  font-family:  "Arial";
+  color: #3f51b5;
+  font-weight: 100 !important;
+  line-height: 1.2;
+  letter-spacing: -0.00833px;
+  margin: 30px;
+}
+
+.div_input{
+  position: relative;
+}
+
+.label_checkbox{
+  margin: 0 20px ;
+  font-size: 18px;
+}
+
+.btn_login{
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  background-color: #3f51b5;
+  border: 0px;
+  color: azure;
+  font-weight: 600;
+}
+
+.btn_login:hover{
+  background-color: #081b83;
+}
+
+.a_Forgot, .a_SignUp{
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  width: 50%;
+}
+
+.a_SignUp{
+  text-align: end;
+}
+
+.a_Forgot:hover, .a_SignUp:hover{
+  color: rgb(41, 31, 189);
+}
+
+.unsuccessful{
+  text-align: center;
+  color: red;
+  margin-bottom: 40px;
+}
+.successful{
+  display: none;
+}
+
